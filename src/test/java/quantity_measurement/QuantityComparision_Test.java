@@ -170,7 +170,7 @@ public class QuantityComparision_Test {
 	}
 	
 	@Test
-	public void givenInch_whenNotSameType_shouldReturnFalse() {
+	public void givenInch_whenNotSameType_shouldReturnTrue() {
 		/*
 		 * Created objects of feet and inch
 		 */
