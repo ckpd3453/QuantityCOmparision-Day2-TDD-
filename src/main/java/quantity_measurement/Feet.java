@@ -1,6 +1,5 @@
 package quantity_measurement;
 
-
 public class Feet {
 	/*
 	 * Created a final variable

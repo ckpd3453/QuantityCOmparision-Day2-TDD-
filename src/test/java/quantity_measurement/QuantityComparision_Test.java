@@ -20,4 +20,19 @@ public class QuantityComparision_Test {
 		Assert.assertEquals(feet1, feet2);
 	}
 
+	/**
+	 * Test Case 1.2
+	 */
+	@Test
+	public void givenNullfeet_shouldReturnFalse() {
+		/*
+		 * Created a objects of feet
+		 */
+		Feet feet1 = new Feet(0.0);
+		/*
+		 * Comparing objects value by null if true then test case fail
+		 */
+		Assert.assertFalse(feet1.equals(null));
+	}
+
 }
