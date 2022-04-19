@@ -70,7 +70,7 @@ public class QuantityComparision_Test {
 	}
 	
 	@Test
-	public void givenObject_whenNotSameType_shouldReturnFalse() {
+	public void givenObject_whenNotSameType_shouldReturnTrue() {
 		/*
 		 * Created objects of feet and inch
 		 */
@@ -180,5 +180,28 @@ public class QuantityComparision_Test {
 		 * Comparing objects of different types
 		 */
 		Assert.assertNotSame(feet, inch);
+	}
+	
+	/*
+	 * Test Case 1.10
+	 */
+	@Test
+	public void givenObectsWithSameValue_shouldReturnTrue() {
+		/*
+		 * Created objects of feet and set value 
+		 */
+		Inch inch1 = new Inch();
+		inch1.setValue(3);
+		Inch inch2 = new Inch();
+		inch2.setValue(3);
+		/*
+		 * Initializing values in two variable
+		 */
+		double var1 = inch1.getValue();
+		double var2 = inch2.getValue();
+		/*
+		 * Comparing both variables of same value
+		 */
+		Assert.assertEquals(var1, var2,0);
 	}
 }
