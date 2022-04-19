@@ -65,4 +65,18 @@ public class QuantityComparision_Test {
 		 */
 		Assert.assertEquals(feet1, feet1);
 	}
+	
+	@Test
+	public void givenObject_whenNotSameType_shouldReturnFalse() {
+		/*
+		 * Created objects of feet and inch
+		 */
+		Feet feet = new Feet();
+		Inch inch = new Inch();
+		/*
+		 * Comparing objects of different types
+		 */
+		Assert.assertNotSame(feet, inch);
+	}
+	
 }
