@@ -35,4 +35,20 @@ public class QuantityComparision_Test {
 		Assert.assertFalse(feet1.equals(null));
 	}
 
+	/**
+	 * Test Case 1.3
+	 */
+	@Test
+	public void givenReferencefeet_shouldReturn_sameReferencefeet() {
+		/*
+		 * Created two objects of feet
+		 */
+		Feet feet1 = new Feet(0.0);
+		Feet feet2 = new Feet(0.0);
+		/*
+		 * Comparing reference of two objects by assert method
+		 */
+		Assert.assertSame(feet1, feet1);
+	}
+	
 }
