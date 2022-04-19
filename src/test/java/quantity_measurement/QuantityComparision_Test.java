@@ -122,4 +122,19 @@ public class QuantityComparision_Test {
 		 */
 		Assert.assertEquals(inch1, inch2);
 	}
+	
+	/**
+	 * Test Case 1.7
+	 */
+	@Test
+	public void givenNullInch_shouldReturnFalse() {
+		/*
+		 * Created a objects of feet
+		 */
+		Inch inch1 = new Inch(0.0);
+		/*
+		 * Comparing objects value by null if true then test case fail
+		 */
+		Assert.assertFalse(inch1.equals(null));
+	}
 }
