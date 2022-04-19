@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class QuantityComparision_Test {
+	
+	//*******Feet***********
+	
 	/**
 	 * Test Case 1.1
 	 */
@@ -100,5 +103,23 @@ public class QuantityComparision_Test {
 		 * Comparing both variables of same value
 		 */
 		Assert.assertEquals(var1, var2,0);
+	}
+	
+	
+	//*******inch*********
+	/**
+	 * Test Case 1.6
+	 */
+	@Test
+	public void givenOInch_shouldReturn0Inch() {
+		/*
+		 * Created two objects of feet
+		 */
+		Inch inch1 = new Inch(0.0);
+		Inch inch2 = new Inch(0.0);
+		/*
+		 * Comparing two objects by assert method
+		 */
+		Assert.assertEquals(inch1, inch2);
 	}
 }
