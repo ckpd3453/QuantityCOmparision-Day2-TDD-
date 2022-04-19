@@ -79,4 +79,26 @@ public class QuantityComparision_Test {
 		Assert.assertNotSame(feet, inch);
 	}
 	
+	/*
+	 * Test Case 1.5
+	 */
+	@Test
+	public void givenTwoObectsWithSameValue_shouldReturnTrue() {
+		/*
+		 * Created objects of feet and set value 
+		 */
+		Feet feet1 = new Feet();
+		feet1.setValue(3);
+		Feet feet2 = new Feet();
+		feet2.setValue(3);
+		/*
+		 * Initializing values in two variable
+		 */
+		double var1 = feet1.getValue();
+		double var2 = feet2.getValue();
+		/*
+		 * Comparing both variables of same value
+		 */
+		Assert.assertEquals(var1, var2,0);
+	}
 }

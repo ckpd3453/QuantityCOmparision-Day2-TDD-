@@ -17,6 +17,15 @@ public class Feet {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	public double getValue() {
+		return value;
+	}
+
+	public void setValue(double value) {
+		this.value = value;
+	}
+
 	/*
 	 * Equals to method to compare the equality of objects
 	 */
