@@ -51,4 +51,18 @@ public class QuantityComparision_Test {
 		Assert.assertSame(feet1, feet1);
 	}
 	
+	/*
+	 * Test Case 1.4
+	 */
+	@Test
+	public void givenObject_whenSameType_shouldReturnTrue() {
+		/*
+		 * Created objects of feet
+		 */
+		Feet feet1 = new Feet();
+		/*
+		 * Comparing object of same type
+		 */
+		Assert.assertEquals(feet1, feet1);
+	}
 }

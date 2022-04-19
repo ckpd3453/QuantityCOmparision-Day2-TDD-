@@ -12,6 +12,10 @@ public class Feet {
 	public Feet(double value) {
 		this.value = value;
 	}
+	
+	public Feet() {
+		// TODO Auto-generated constructor stub
+	}
 
 	/*
 	 * Equals to method to compare the equality of objects
