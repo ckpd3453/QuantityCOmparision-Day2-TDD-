@@ -35,4 +35,15 @@ public class Measurement_Tests {
         Double val2 = quantityMeasurement.getConvertedUnit(1.0, Unit.YARD);
         Assert.assertNotEquals(val1, val2);
     }
+
+    /*
+     * Test case 1.15
+     */
+    @Test
+    public void given1InchAnd1YardValue_ShouldReturnNotEqual() {
+
+        Double val1 = quantityMeasurement.getConvertedUnit(1.0, Unit.INCH);
+        Double val2 = quantityMeasurement.getConvertedUnit(1.0, Unit.YARD);
+        Assert.assertNotEquals(val1, val2);
+    }
 }
