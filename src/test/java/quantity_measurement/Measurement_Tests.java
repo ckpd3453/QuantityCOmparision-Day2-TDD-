@@ -31,8 +31,8 @@ public class Measurement_Tests {
     @Test
     public void given1FeetAnd1YardValue_ShouldReturnNotEqual() {
 
-        Double val1 = quantityMeasurement.getConvertedUnit(1.0, Unit.FEET);
-        Double val2 = quantityMeasurement.getConvertedUnit(1.0, Unit.YARD);
+        val1 = quantityMeasurement.getConvertedUnit(1.0, Unit.FEET);
+        val2 = quantityMeasurement.getConvertedUnit(1.0, Unit.YARD);
         Assert.assertNotEquals(val1, val2);
     }
 
@@ -42,8 +42,8 @@ public class Measurement_Tests {
     @Test
     public void given1InchAnd1YardValue_ShouldReturnNotEqual() {
 
-        Double val1 = quantityMeasurement.getConvertedUnit(1.0, Unit.INCH);
-        Double val2 = quantityMeasurement.getConvertedUnit(1.0, Unit.YARD);
+        val1 = quantityMeasurement.getConvertedUnit(1.0, Unit.INCH);
+        val2 = quantityMeasurement.getConvertedUnit(1.0, Unit.YARD);
         Assert.assertNotEquals(val1, val2);
     }
 
@@ -53,8 +53,19 @@ public class Measurement_Tests {
     @Test
     public void given1YardAnd36InchValue_ShouldReturnEqual() {
 
-        Double val1 = quantityMeasurement.getConvertedUnit(1.0, Unit.YARD);
-        Double val2 = quantityMeasurement.getConvertedUnit(36.0, Unit.INCH);
-        Assert.assertEquals(val1, val2);
+        val1 = quantityMeasurement.getConvertedUnit(1.0, Unit.YARD);
+        val2 = quantityMeasurement.getConvertedUnit(36.0, Unit.INCH);
+        Assert.assertEquals(val1, val2,0.0);
+    }
+
+    /*
+    Test Case 1.17
+     */
+    @Test
+    public void given36InchAnd1YardValue_ShouldReturnEqual(){
+
+        val1 = quantityMeasurement.getConvertedUnit(36.0, Unit.INCH);
+        val2 = quantityMeasurement.getConvertedUnit(1.0, Unit.YARD);
+        Assert.assertEquals(val1, val2, 0.0);
     }
 }
