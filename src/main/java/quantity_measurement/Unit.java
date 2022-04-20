@@ -1,7 +1,7 @@
 package quantity_measurement;
 
 public enum Unit {
-	FEET(12.0),INCH(1),YARD(36.0);
+	INCH(2.5),CM(1);
 
 	
 	final double val;
