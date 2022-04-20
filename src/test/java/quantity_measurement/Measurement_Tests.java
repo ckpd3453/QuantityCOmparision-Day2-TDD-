@@ -24,4 +24,15 @@ public class Measurement_Tests {
         val2 = quantityMeasurement.getConvertedUnit(5.0, Unit.CM);
         Assert.assertEquals(val1, val2,0.0);
     }
+
+    /*
+    Test case 1.20
+     */
+    @Test
+    public void given5CmAnd2InchValue_ShouldReturnEqual(){
+
+        val1 = quantityMeasurement.getConvertedUnit(5.0,Unit.CM);
+        val2 = quantityMeasurement.getConvertedUnit(2.0,Unit.INCH);
+        Assert.assertEquals(val1, val2, 0.0);
+    }
 }
