@@ -46,4 +46,15 @@ public class Measurement_Tests {
         Double val2 = quantityMeasurement.getConvertedUnit(1.0, Unit.YARD);
         Assert.assertNotEquals(val1, val2);
     }
+
+    /*
+     * Test case 1.16
+     */
+    @Test
+    public void given1YardAnd36InchValue_ShouldReturnEqual() {
+
+        Double val1 = quantityMeasurement.getConvertedUnit(1.0, Unit.YARD);
+        Double val2 = quantityMeasurement.getConvertedUnit(36.0, Unit.INCH);
+        Assert.assertEquals(val1, val2);
+    }
 }
