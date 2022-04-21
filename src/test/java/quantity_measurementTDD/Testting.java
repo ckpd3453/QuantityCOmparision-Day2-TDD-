@@ -31,4 +31,15 @@ public class Testting {
         check = length1.add(length2);
         Assert.assertEquals(14,check,0.0);
     }
+
+    /*
+    Test Case -1.24 (1Feet + 1Feet = 24Inch)
+     */
+    @Test
+    public void given1FeetAnd1Feet_SHouldReturn24Inch(){
+        length1 = new UnitMeasurementSystem(Length.FEET,1.0);
+        length2 = new UnitMeasurementSystem(Length.FEET,1.0);
+        check = length1.add(length2);
+        Assert.assertEquals(24.0,check,0.0);
+    }
 }
