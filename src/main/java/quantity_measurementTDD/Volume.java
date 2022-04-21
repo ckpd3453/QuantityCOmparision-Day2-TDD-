@@ -2,7 +2,7 @@ package quantity_measurementTDD;
 import quantityMeasurementTDD.MeasurementUnit;
 
 public enum Volume implements MeasurementUnit {
-    Gallon(3.78),Litre(1);
+    Gallon(3.78),Litre(1.0), ML(1/1000.0);
 
     private final double unitVal;
 
