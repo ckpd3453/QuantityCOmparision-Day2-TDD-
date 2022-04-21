@@ -10,7 +10,7 @@ public class Testting {
     public static UnitMeasurementSystem vol2;
 
     public static boolean checkBoolean;
-
+    public double check;
 
     /*
     Test Case -1.26 (Given 1Gallon And 3.78Litre Should Return True)
@@ -32,5 +32,16 @@ public class Testting {
         vol2 = new UnitMeasurementSystem(Volume.ML,1000);
         checkBoolean = vol1.compare(vol2);
         Assert.assertTrue(checkBoolean);
+    }
+
+    /*
+    Test Case -1.28 (1Gallon+3.78Litre = 7.56Litre)
+     */
+    @Test
+    public void givenAdditionOf_1GallonAndThreePointSevenEightLitre_ShouldReturnSevenPointFiveSevenLitres(){
+        vol1 = new UnitMeasurementSystem(Volume.Gallon,1);
+        vol2 = new UnitMeasurementSystem(Volume.Litre,3.78);
+        check = vol1.add(vol2);
+        Assert.assertEquals(7.56,check,0.0);
     }
 }
