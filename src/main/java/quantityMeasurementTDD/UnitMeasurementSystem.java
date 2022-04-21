@@ -36,7 +36,7 @@ public class UnitMeasurementSystem {
         return this.unit.getBaseUnitValue(this.value)+that.unit.getBaseUnitValue(that.value);
     }
 
-    
+
     @Override
     public boolean equals(Object obj) {
         return super.equals(obj);
