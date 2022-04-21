@@ -44,4 +44,15 @@ public class Testting {
         check = vol1.add(vol2);
         Assert.assertEquals(7.56,check,0.0);
     }
+
+    /*
+    Test Case -1.29 (1Litre+1000ML = 2Litre)
+     */
+    @Test
+    public void givenAdditionOf_1LiteAnd1000ML_ShouldReturn2Litres(){
+        vol1 = new UnitMeasurementSystem(Volume.Litre,1);
+        vol2 = new UnitMeasurementSystem(Volume.ML,1000);
+        check = vol1.add(vol2);
+        Assert.assertEquals(2.0,check,0.0);
+    }
 }
