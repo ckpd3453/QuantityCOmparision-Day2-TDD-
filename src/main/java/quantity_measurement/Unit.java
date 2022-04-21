@@ -1,12 +1,19 @@
 package quantity_measurement;
+interface MeasurementUnit {
+    public double convertToBaseUnit(double value);
+}
 
-public enum Unit {
-	INCH(2.5),CM(1);
+public enum Unit implements MeasurementUnit {
+	INCH(12),CM(1), FEET(1);
 
 	
-	final double val;
+	final double unitVal;
 
-    Unit(double val) {
-    this.val = val;
+    private Unit(double unitVal) {
+    this.unitVal = unitVal;
+    }
+
+    public double convertToBaseUnit(double value) {
+        return value*unitVal;
     }
 }
