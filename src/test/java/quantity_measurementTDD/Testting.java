@@ -67,4 +67,14 @@ public class Testting {
         Assert.assertTrue(checkBoolean);
     }
 
+    /*
+    Test Case -1.31 (Given 1KTone And 1000KG Should Return True)
+     */
+    @Test
+    public void given1ToneAnd1000Kg_ShouldReturnTrue(){
+        vol1 = new UnitMeasurementSystem(Volume.Tone,1);
+        vol2 = new UnitMeasurementSystem(Volume.KG,1000);
+        checkBoolean = vol1.compare(vol2);
+        Assert.assertTrue(checkBoolean);
+    }
 }
