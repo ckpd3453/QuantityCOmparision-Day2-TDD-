@@ -1,14 +1,16 @@
 package quantityMeasurementTDD;
 
+import quantity_measurementTDD.Volume;
+
 public class UnitMeasurementSystem {
 
-    private Length unit;
-    private double value;
+    private final Volume unit;
+    private final double value;
 
     /*
     Constructor
      */
-    public UnitMeasurementSystem(Length unit, double value) {
+    public UnitMeasurementSystem(Volume unit, double value) {
         this.unit = unit;
         this.value = value;
     }
@@ -17,6 +19,7 @@ public class UnitMeasurementSystem {
     Compare method to compare the reference and values
      */
     public boolean compare(UnitMeasurementSystem that) {
+
         if (this.unit.getClass() != that.unit.getClass()) {
             return false;
         }
