@@ -55,4 +55,16 @@ public class Testting {
         check = vol1.add(vol2);
         Assert.assertEquals(2.0,check,0.0);
     }
+
+    /*
+    Test Case -1.30 (Given 1Kg And 1000Gram Should Return True)
+     */
+    @Test
+    public void given1kgAnd1000Grams_ShouldReturnTrue(){
+        vol1 = new UnitMeasurementSystem(Volume.KG,1);
+        vol2 = new UnitMeasurementSystem(Volume.Gram,1000);
+        checkBoolean = vol1.compare(vol2);
+        Assert.assertTrue(checkBoolean);
+    }
+
 }
