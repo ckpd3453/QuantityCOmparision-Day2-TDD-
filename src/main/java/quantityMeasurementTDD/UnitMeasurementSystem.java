@@ -4,6 +4,7 @@ public class UnitMeasurementSystem {
 
     private Length unit;
     private double value;
+
     /*
     Constructor
      */
@@ -16,24 +17,24 @@ public class UnitMeasurementSystem {
     Compare method to compare the reference and values
      */
     public boolean compare(UnitMeasurementSystem that) {
-        if(this.unit.getClass() != that.unit.getClass()){
+        if (this.unit.getClass() != that.unit.getClass()) {
             return false;
         }
-        if(this.unit.equals(that.unit)){
+        if (this.unit.equals(that.unit)) {
             return this.equals(that);
         }
-        return Double.compare(this.unit.getBaseUnitValue(this.value),that.unit.getBaseUnitValue(that.value)) == 0;
+        return Double.compare(this.unit.getBaseUnitValue(this.value), that.unit.getBaseUnitValue(that.value)) == 0;
     }
 
     /*
     Addition method to add two values
      */
-    public double add(UnitMeasurementSystem that){
-        if(this.unit.getClass() != that.unit.getClass() ||
-            !this.unit.supportAddition() || !that.unit.supportAddition()){
+    public double add(UnitMeasurementSystem that) {
+        if (this.unit.getClass() != that.unit.getClass() ||
+                !this.unit.supportAddition() || !that.unit.supportAddition()) {
             return 0.0;
         }
-        return this.unit.getBaseUnitValue(this.value)+that.unit.getBaseUnitValue(that.value);
+        return this.unit.getBaseUnitValue(this.value) + that.unit.getBaseUnitValue(that.value);
     }
 
 

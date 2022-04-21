@@ -4,10 +4,11 @@ package quantityMeasurementTDD;
 @Enum
  */
 public enum Length implements MeasurementUnit {
-    INCH(1), FEET(12);
+    INCH(1), CM(1/2.5), FEET(12);
 
 
     final double unitVal;
+
     /*
     Constructor of Enum
      */
@@ -23,7 +24,7 @@ public enum Length implements MeasurementUnit {
         return unitVal * value;
     }
 
-    public boolean supportAddition(){ //Support Addition
+    public boolean supportAddition() { //Support Addition
         return true;
     }
 }
