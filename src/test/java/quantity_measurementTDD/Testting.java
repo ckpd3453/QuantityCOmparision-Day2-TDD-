@@ -77,4 +77,16 @@ public class Testting {
         checkBoolean = vol1.compare(vol2);
         Assert.assertTrue(checkBoolean);
     }
+
+    /*
+    Test Case -1.32 (1Tone+1000Gram = 1001kg)
+     */
+    @Test
+    public void additionOf1ToneAnd1000Gram_ShouldReturn1001Kg(){
+        vol1 = new UnitMeasurementSystem(Volume.Tone,1);
+        vol2 = new UnitMeasurementSystem(Volume.Gram,1000);
+        check = vol1.add(vol2);
+        Assert.assertEquals(1001,check,0.0);
+
+    }
 }
