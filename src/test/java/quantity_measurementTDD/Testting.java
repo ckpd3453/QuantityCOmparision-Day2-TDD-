@@ -89,4 +89,15 @@ public class Testting {
         Assert.assertEquals(1001,check,0.0);
 
     }
+
+    /*
+    Test Case -1.33(212 degree Fahrenhiet = 100 degree Celsius)
+     */
+    @Test
+    public void given212DegreeFahrenheitand100DegreeCelsius_ShouldReturnEqual(){
+        vol1 = new UnitMeasurementSystem(Volume.Celsius,100);
+        vol2 = new UnitMeasurementSystem(Volume.Fahrenheit,212.0);
+        checkBoolean = vol1.compare(vol2);
+        Assert.assertTrue(checkBoolean);
+    }
 }
