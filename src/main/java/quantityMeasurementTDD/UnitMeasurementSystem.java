@@ -26,10 +26,13 @@ public class UnitMeasurementSystem {
         if (this.unit.equals(that.unit)) {
             return this.equals(that);
         }
-        if (Double.compare(this.unit.getBaseUnitValue((this.value*9/5)+32),that.unit.getBaseUnitValue(that.value)) == 0)
-            return true;
         return Double.compare(this.unit.getBaseUnitValue(this.value), that.unit.getBaseUnitValue(that.value)) == 0;
     }
+
+    public boolean compareTemp(UnitMeasurementSystem temp){
+            return Double.compare(this.unit.getBaseUnitValue((this.value * 1.8) + 32.0), temp.unit.getBaseUnitValue(temp.value)) == 0;
+    }
+
 
     /*
     Addition method to add two values

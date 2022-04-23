@@ -68,7 +68,7 @@ public class Testting {
     }
 
     /*
-    Test Case -1.31 (Given 1KTone And 1000KG Should Return True)
+    Test Case -1.31 (Given 1Tone And 1000KG Should Return True)
      */
     @Test
     public void given1ToneAnd1000Kg_ShouldReturnTrue(){
@@ -96,8 +96,19 @@ public class Testting {
     @Test
     public void given212DegreeFahrenheitand100DegreeCelsius_ShouldReturnEqual(){
         vol1 = new UnitMeasurementSystem(Volume.Celsius,100);
-        vol2 = new UnitMeasurementSystem(Volume.Fahrenheit,212.0);
-        checkBoolean = vol1.compare(vol2);
+        vol2 = new UnitMeasurementSystem(Volume.Fahrenheit,212);
+        checkBoolean = vol1.compareTemp(vol2);
         Assert.assertTrue(checkBoolean);
+    }
+
+    /*
+    Test Case -1.34(0 degree Fahrenheit and 0 degree Celsius should return false)
+     */
+    @Test
+    public void given0DegreeFahrenheitand0DegreeCelsius_ShouldReturnFalse(){
+        vol1 = new UnitMeasurementSystem(Volume.Celsius,0);
+        vol2 = new UnitMeasurementSystem(Volume.Fahrenheit,0);
+        checkBoolean = vol1.compareTemp(vol2);
+        Assert.assertFalse(checkBoolean);
     }
 }
